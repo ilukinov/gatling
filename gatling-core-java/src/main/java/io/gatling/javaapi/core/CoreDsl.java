@@ -3210,8 +3210,6 @@ public final class CoreDsl {
     return CoreCheckBuilders.responseEndTimestamp();
   }
 
-  ////////// FeederSupport
-
   /**
    * Bootstrap a new <a href="https://datatracker.ietf.org/doc/html/rfc4180">CSV</a> file based
    * feeder

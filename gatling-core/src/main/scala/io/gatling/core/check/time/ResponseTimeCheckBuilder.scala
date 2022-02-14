@@ -17,7 +17,7 @@
 package io.gatling.core.check.time
 
 import io.gatling.commons.validation._
-import io.gatling.core.check.{CheckBuilder, FindExtractor}
+import io.gatling.core.check.{ CheckBuilder, FindExtractor }
 import io.gatling.core.session._
 import io.gatling.core.stats.message.ResponseTimings
 
@@ -33,7 +33,8 @@ object ResponseTimeCheckBuilder {
 
   val ResponseStartTimeTimestamp: CheckBuilder.Find[ResponseTimeCheckType, ResponseTimings, Long] =
     new CheckBuilder.Find.Default[ResponseTimeCheckType, ResponseTimings, Long](
-      extractor = new FindExtractor[ResponseTimings, Long]("responseStartTimestamp", prepared => Some(prepared.responseStartTimestamp).success).expressionSuccess,
+      extractor =
+        new FindExtractor[ResponseTimings, Long]("responseStartTimestamp", prepared => Some(prepared.responseStartTimestamp).success).expressionSuccess,
       displayActualValue = false
     )
 

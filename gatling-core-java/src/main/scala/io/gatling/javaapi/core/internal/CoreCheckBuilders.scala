@@ -54,6 +54,22 @@ object CoreCheckBuilders {
       (int: Int) => int.asInstanceOf[Integer]
     )
 
+  val responseStartTimestamp: CheckBuilder.Find[java.lang.Long] =
+    new CheckBuilder.Find.Default(
+      io.gatling.core.Predef.responseStartTimestamp,
+      CoreCheckType.ResponseStartTimestamp,
+      classOf[java.lang.Long],
+      (long: Long) => long.asInstanceOf[java.lang.Long]
+    )
+
+  val responseEndTimestamp: CheckBuilder.Find[java.lang.Long] =
+    new CheckBuilder.Find.Default(
+      io.gatling.core.Predef.responseEndTimestamp,
+      CoreCheckType.responseEndTimestamp,
+      classOf[java.lang.Long],
+      (long: Long) => long.asInstanceOf[java.lang.Long]
+    )
+
   def transformSingleCheck[T, P, ScalaX, JavaX](
       wrapped: io.gatling.core.check.CheckBuilder.Validate[T, P, ScalaX],
       scalaXToJavaX: juf.Function[ScalaX, JavaX]

@@ -107,4 +107,7 @@ trait CheckSupport {
   val sha1: CheckBuilder.Find[Sha1CheckType, String, String] = ChecksumCheckBuilder.Sha1
 
   val responseTimeInMillis: CheckBuilder.Find[ResponseTimeCheckType, ResponseTimings, Int] = ResponseTimeCheckBuilder.ResponseTimeInMillis
+  val responseStartTimestamp: CheckBuilder.Find[ResponseTimeCheckType, ResponseTimings, Long] = ResponseTimeCheckBuilder.ResponseStartTimeTimestamp
+  val responseEndTimestamp: CheckBuilder.Find[ResponseTimeCheckType, ResponseTimings, Long] = ResponseTimeCheckBuilder.ResponseEndTimeTimestamp
+
 }

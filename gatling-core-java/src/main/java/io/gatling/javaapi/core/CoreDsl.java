@@ -3182,6 +3182,36 @@ public final class CoreDsl {
     return CoreCheckBuilders.responseTimeInMillis();
   }
 
+  /**
+   * Bootstrap a new responseStartTimestamp check that extracts the response start time of the
+   * request.
+   *
+   * <p>Note: On contrary to the Scala DSL, the compiler can't check the availability of this check
+   * type for your protocol. If the protocol you're using doesn't support it, you'll get a runtime
+   * {@link IllegalArgumentException}
+   *
+   * @return the next DSL step
+   */
+  @Nonnull
+  public static CheckBuilder.Find<Long> responseStartTimestamp() {
+    return CoreCheckBuilders.responseStartTimestamp();
+  }
+
+  /**
+   * Bootstrap a new responseEndTimestamp check that extracts the response end time of the
+   * request.
+   *
+   * <p>Note: On contrary to the Scala DSL, the compiler can't check the availability of this check
+   * type for your protocol. If the protocol you're using doesn't support it, you'll get a runtime
+   * {@link IllegalArgumentException}
+   *
+   * @return the next DSL step
+   */
+  @Nonnull
+  public static CheckBuilder.Find<Long> responseEndTimestamp() {
+    return CoreCheckBuilders.responseEndTimestamp();
+  }
+
   ////////// FeederSupport
 
   /**

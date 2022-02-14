@@ -33,5 +33,7 @@ public enum CoreCheckType implements CheckBuilder.CheckType {
   JsonpJmesPath,
   Md5,
   Sha1,
-  ResponseTime
+  ResponseTime,
+  ResponseStartTimestamp,
+  responseEndTimestamp
 }

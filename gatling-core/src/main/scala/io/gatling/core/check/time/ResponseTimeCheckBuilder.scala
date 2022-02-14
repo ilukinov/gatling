@@ -30,4 +30,18 @@ object ResponseTimeCheckBuilder {
       extractor = new FindExtractor[ResponseTimings, Int]("responseTimeInMillis", prepared => Some(prepared.responseTime).success).expressionSuccess,
       displayActualValue = false
     )
+
+  val ResponseStartTimeTimestamp: CheckBuilder.Find[ResponseTimeCheckType, ResponseTimings, Long] =
+    new CheckBuilder.Find.Default[ResponseTimeCheckType, ResponseTimings, Long](
+      extractor =
+        new FindExtractor[ResponseTimings, Long]("responseStartTimestamp", prepared => Some(prepared.responseStartTimestamp).success).expressionSuccess,
+      displayActualValue = false
+    )
+
+  val ResponseEndTimeTimestamp: CheckBuilder.Find[ResponseTimeCheckType, ResponseTimings, Long] =
+    new CheckBuilder.Find.Default[ResponseTimeCheckType, ResponseTimings, Long](
+      extractor =
+        new FindExtractor[ResponseTimings, Long]("responseEndTimestamp", prepared => Some(prepared.responseEndTimestamp).success).expressionSuccess,
+      displayActualValue = false
+    )
 }

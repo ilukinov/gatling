@@ -29,4 +29,6 @@ object ResponseTimings {
 final class ResponseTimings(val startTimestamp: Long, val endTimestamp: Long) {
 
   val responseTime: Int = ResponseTimings.responseTime(startTimestamp, endTimestamp)
+  val responseStartTimestamp: Long = startTimestamp
+  val responseEndTimestamp: Long = endTimestamp
 }

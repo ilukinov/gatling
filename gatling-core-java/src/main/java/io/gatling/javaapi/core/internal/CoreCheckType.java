@@ -35,5 +35,5 @@ public enum CoreCheckType implements CheckBuilder.CheckType {
   Sha1,
   ResponseTime,
   ResponseStartTimestamp,
-  responseEndTimestamp
+  ResponseEndTimestamp
 }

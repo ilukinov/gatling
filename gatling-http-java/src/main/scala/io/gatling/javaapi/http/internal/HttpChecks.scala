@@ -78,6 +78,10 @@ object HttpChecks {
       case CoreCheckType.Sha1 => scalaCheck.asInstanceOf[CheckBuilder[Sha1CheckType, String]].build(HttpPredef.httpSha1CheckMaterializer)
       case CoreCheckType.ResponseTime =>
         scalaCheck.asInstanceOf[CheckBuilder[ResponseTimeCheckType, ResponseTimings]].build(HttpPredef.httpResponseTimeCheckMaterializer)
+      case CoreCheckType.ResponseStartTimestamp =>
+        scalaCheck.asInstanceOf[CheckBuilder[ResponseTimeCheckType, ResponseTimings]].build(HttpPredef.httpResponseTimeCheckMaterializer)
+      case CoreCheckType.ResponseEndTimestamp =>
+        scalaCheck.asInstanceOf[CheckBuilder[ResponseTimeCheckType, ResponseTimings]].build(HttpPredef.httpResponseTimeCheckMaterializer)
       case HttpCheckType.CurrentLocation =>
         scalaCheck.asInstanceOf[CheckBuilder[CurrentLocationCheckType, String]].build(HttpPredef.currentLocationCheckMaterializer)
       case HttpCheckType.CurrentLocationRegex =>

@@ -65,7 +65,7 @@ object CoreCheckBuilders {
   val responseEndTimestamp: CheckBuilder.Find[java.lang.Long] =
     new CheckBuilder.Find.Default(
       io.gatling.core.Predef.responseEndTimestamp,
-      CoreCheckType.responseEndTimestamp,
+      CoreCheckType.ResponseEndTimestamp,
       classOf[java.lang.Long],
       (long: Long) => long.asInstanceOf[java.lang.Long]
     )
